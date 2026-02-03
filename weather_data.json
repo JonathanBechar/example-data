@@ -1,0 +1,45 @@
+{
+  "location": {
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    }
+  },
+  "current": {
+    "temperature": 72,
+    "feels_like": 70,
+    "humidity": 65,
+    "pressure": 1013,
+    "wind_speed": 8,
+    "wind_direction": "NW",
+    "conditions": "Partly Cloudy",
+    "visibility": 10,
+    "uv_index": 6
+  },
+  "forecast": [
+    {
+      "date": "2024-06-15",
+      "high": 78,
+      "low": 65,
+      "conditions": "Sunny",
+      "precipitation_chance": 10
+    },
+    {
+      "date": "2024-06-16",
+      "high": 75,
+      "low": 63,
+      "conditions": "Partly Cloudy",
+      "precipitation_chance": 20
+    },
+    {
+      "date": "2024-06-17",
+      "high": 70,
+      "low": 60,
+      "conditions": "Rain",
+      "precipitation_chance": 80
+    }
+  ]
+}

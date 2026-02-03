@@ -1,0 +1,38 @@
+{
+  "library": "City Central Library",
+  "books": [
+    {
+      "isbn": "978-0-123456-78-9",
+      "title": "The Great Adventure",
+      "author": "John Writer",
+      "published_year": 2020,
+      "genre": "Fiction",
+      "pages": 320,
+      "available_copies": 3,
+      "total_copies": 5,
+      "location": "Section A, Shelf 12"
+    },
+    {
+      "isbn": "978-0-987654-32-1",
+      "title": "Learning Python: A Practical Guide",
+      "author": "Sarah Developer",
+      "published_year": 2022,
+      "genre": "Technology",
+      "pages": 450,
+      "available_copies": 2,
+      "total_copies": 4,
+      "location": "Section C, Shelf 8"
+    },
+    {
+      "isbn": "978-0-246813-57-9",
+      "title": "History of Ancient Civilizations",
+      "author": "Dr. Michael Historian",
+      "published_year": 2018,
+      "genre": "History",
+      "pages": 580,
+      "available_copies": 1,
+      "total_copies": 2,
+      "location": "Section D, Shelf 15"
+    }
+  ]
+}

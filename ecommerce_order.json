@@ -1,0 +1,59 @@
+{
+  "order_id": "ORD-2024-00123",
+  "customer": {
+    "customer_id": "CUST-456",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "+1-555-0123"
+  },
+  "order_date": "2024-01-15T14:30:00Z",
+  "status": "shipped",
+  "items": [
+    {
+      "product_id": "PROD-001",
+      "name": "Wireless Mouse",
+      "quantity": 2,
+      "unit_price": 29.99,
+      "subtotal": 59.98
+    },
+    {
+      "product_id": "PROD-002",
+      "name": "USB-C Cable",
+      "quantity": 3,
+      "unit_price": 12.99,
+      "subtotal": 38.97
+    },
+    {
+      "product_id": "PROD-003",
+      "name": "Laptop Stand",
+      "quantity": 1,
+      "unit_price": 49.99,
+      "subtotal": 49.99
+    }
+  ],
+  "shipping": {
+    "method": "Standard",
+    "cost": 9.99,
+    "address": {
+      "street": "456 Oak Avenue",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97201",
+      "country": "USA"
+    },
+    "tracking_number": "1Z999AA10123456784"
+  },
+  "payment": {
+    "method": "credit_card",
+    "last_four": "4242",
+    "transaction_id": "txn_1234567890",
+    "amount": 158.93
+  },
+  "totals": {
+    "subtotal": 148.94,
+    "shipping": 9.99,
+    "tax": 0.00,
+    "total": 158.93,
+    "currency": "USD"
+  }
+}

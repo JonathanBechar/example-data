@@ -1,0 +1,92 @@
+{
+  "restaurant": {
+    "name": "The Gourmet Kitchen",
+    "cuisine": "Italian",
+    "address": "789 Food Street, Chicago, IL 60601",
+    "phone": "+1-555-0199"
+  },
+  "menu": {
+    "appetizers": [
+      {
+        "id": "APP-001",
+        "name": "Bruschetta",
+        "description": "Toasted bread topped with tomatoes, garlic, and basil",
+        "price": 8.99,
+        "vegetarian": true,
+        "vegan": false,
+        "spicy": false
+      },
+      {
+        "id": "APP-002",
+        "name": "Calamari Fritti",
+        "description": "Lightly fried squid served with marinara sauce",
+        "price": 12.99,
+        "vegetarian": false,
+        "vegan": false,
+        "spicy": false
+      }
+    ],
+    "main_courses": [
+      {
+        "id": "MAIN-001",
+        "name": "Spaghetti Carbonara",
+        "description": "Classic pasta with eggs, pancetta, and Parmesan",
+        "price": 16.99,
+        "vegetarian": false,
+        "vegan": false,
+        "spicy": false
+      },
+      {
+        "id": "MAIN-002",
+        "name": "Margherita Pizza",
+        "description": "Fresh mozzarella, tomato sauce, and basil",
+        "price": 14.99,
+        "vegetarian": true,
+        "vegan": false,
+        "spicy": false
+      },
+      {
+        "id": "MAIN-003",
+        "name": "Osso Buco",
+        "description": "Braised veal shanks with vegetables and risotto",
+        "price": 28.99,
+        "vegetarian": false,
+        "vegan": false,
+        "spicy": false
+      }
+    ],
+    "desserts": [
+      {
+        "id": "DES-001",
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert with coffee and mascarpone",
+        "price": 7.99,
+        "vegetarian": true,
+        "vegan": false
+      },
+      {
+        "id": "DES-002",
+        "name": "Panna Cotta",
+        "description": "Silky vanilla cream with berry sauce",
+        "price": 6.99,
+        "vegetarian": true,
+        "vegan": false
+      }
+    ],
+    "beverages": [
+      {
+        "id": "BEV-001",
+        "name": "Espresso",
+        "price": 3.50,
+        "size": "single"
+      },
+      {
+        "id": "BEV-002",
+        "name": "House Wine",
+        "price": 8.00,
+        "type": "red or white",
+        "size": "glass"
+      }
+    ]
+  }
+}

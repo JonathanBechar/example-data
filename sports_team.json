@@ -1,0 +1,64 @@
+{
+  "team": {
+    "name": "Thunder Hawks",
+    "sport": "Basketball",
+    "founded": 1995,
+    "city": "Seattle",
+    "stadium": {
+      "name": "Victory Arena",
+      "capacity": 18000,
+      "address": "500 Sports Way, Seattle, WA 98101"
+    },
+    "roster": [
+      {
+        "player_id": 23,
+        "name": "Marcus Johnson",
+        "position": "Point Guard",
+        "height": "6'2\"",
+        "weight": 185,
+        "number": 7,
+        "stats": {
+          "points_per_game": 18.5,
+          "assists_per_game": 7.2,
+          "rebounds_per_game": 4.1
+        }
+      },
+      {
+        "player_id": 45,
+        "name": "David Thompson",
+        "position": "Center",
+        "height": "7'0\"",
+        "weight": 250,
+        "number": 32,
+        "stats": {
+          "points_per_game": 22.3,
+          "assists_per_game": 2.1,
+          "rebounds_per_game": 11.8
+        }
+      },
+      {
+        "player_id": 67,
+        "name": "Alex Rodriguez",
+        "position": "Small Forward",
+        "height": "6'7\"",
+        "weight": 215,
+        "number": 15,
+        "stats": {
+          "points_per_game": 15.8,
+          "assists_per_game": 3.5,
+          "rebounds_per_game": 6.2
+        }
+      }
+    ],
+    "season_record": {
+      "wins": 45,
+      "losses": 37,
+      "conference_standing": 4
+    },
+    "coach": {
+      "name": "Tom Anderson",
+      "years_with_team": 8,
+      "career_wins": 342
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "SecurityGroups": [
+    {
+      "Description": "Default security group",
+      "GroupName": "default",
+      "IpPermissions": [
+        {
+          "FromPort": -1,
+          "IpProtocol": "-1",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": -1,
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-0123456789abcdef0",
+              "UserId": "123456789012"
+            }
+          ]
+        }
+      ],
+      "OwnerId": "123456789012",
+      "GroupId": "sg-0123456789abcdef0",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ],
+      "Tags": [],
+      "VpcId": "vpc-87654321"
+    },
+    {
+      "Description": "Security group for web servers",
+      "GroupName": "web-servers",
+      "IpPermissions": [
+        {
+          "FromPort": 80,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0",
+              "Description": "Allow HTTP from anywhere"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 80,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 443,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0",
+              "Description": "Allow HTTPS from anywhere"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 443,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 22,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "203.0.113.0/24",
+              "Description": "Allow SSH from office network"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 22,
+          "UserIdGroupPairs": []
+        }
+      ],
+      "OwnerId": "123456789012",
+      "GroupId": "sg-0fedcba9876543210",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "WebServerSecurityGroup"
+        },
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        }
+      ],
+      "VpcId": "vpc-87654321"
+    },
+    {
+      "Description": "Security group for database servers",
+      "GroupName": "database-servers",
+      "IpPermissions": [
+        {
+          "FromPort": 3306,
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 3306,
+          "UserIdGroupPairs": [
+            {
+              "Description": "Allow MySQL from web servers",
+              "GroupId": "sg-0fedcba9876543210",
+              "UserId": "123456789012"
+            }
+          ]
+        },
+        {
+          "FromPort": 5432,
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 5432,
+          "UserIdGroupPairs": [
+            {
+              "Description": "Allow PostgreSQL from web servers",
+              "GroupId": "sg-0fedcba9876543210",
+              "UserId": "123456789012"
+            }
+          ]
+        }
+      ],
+      "OwnerId": "123456789012",
+      "GroupId": "sg-0abcdef1234567890",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "DatabaseSecurityGroup"
+        },
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        }
+      ],
+      "VpcId": "vpc-87654321"
+    }
+  ],
+  "ResponseMetadata": {
+    "RequestId": "87654321-4321-4321-4321-210987654321",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "content-type": "text/xml;charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding",
+      "date": "Mon, 15 Jan 2024 10:50:00 GMT",
+      "server": "AmazonEC2"
+    },
+    "RetryAttempts": 0
+  }
+}

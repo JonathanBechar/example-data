@@ -48,7 +48,8 @@ def create_ec2_instance(ami_id, instance_type, key_name=None):
 
 if __name__ == "__main__":
     # Test your function (replace with your own values)
-    ami_id = "ami-0c55b159cbfafe1f0"
+    # Note: AMI IDs are region-specific. Use a valid AMI ID for your region.
+    ami_id = "ami-0c55b159cbfafe1f0"  # Example AMI ID - replace with your own
     instance_type = "t2.micro"
     key_name = "my-key-pair"
     

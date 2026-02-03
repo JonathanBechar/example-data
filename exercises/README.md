@@ -56,9 +56,9 @@ Learn how to:
 ## Testing with Example Data
 
 This repository includes example EC2 API responses in the parent directory:
-- `../boto3_ec2_describe_instances.json` - Sample describe_instances() response
+- `../boto3_ec2_describe_instances.json` - Sample describe_instances() response with multiple running instances
 
-You can use these files to understand the structure of AWS API responses without making actual API calls.
+You can use these files to understand the structure of AWS API responses without making actual API calls. These JSON files are located in the repository root directory and show realistic AWS EC2 API response structures.
 
 ## AWS Credentials
 

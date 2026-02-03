@@ -23,6 +23,17 @@ This repository contains example JSON files with various data structures for tes
 - **boto3_ec2_describe_instances.json** - AWS EC2 describe_instances() response with multiple running instances
 - **boto3_ec2_describe_security_groups.json** - AWS EC2 describe_security_groups() response with various security group configurations
 
+## Exercises
+
+The **exercises/** directory contains Python programming exercises for learning AWS boto3:
+- **Boto3 EC2 Exercises** - Hands-on exercises for working with AWS EC2 using boto3
+  - Counting running instances
+  - Creating new EC2 instances
+  - Retrieving external IP addresses
+  - Each exercise includes a matching solution file
+
+See [exercises/README.md](exercises/README.md) for detailed instructions.
+
 ## Usage
 
 These JSON files can be used for:
@@ -31,6 +42,7 @@ These JSON files can be used for:
 - Practicing data analysis with Python, JavaScript, or other languages
 - Understanding AWS API responses
 - Developing and testing applications that consume JSON data
+- Practicing boto3 exercises with realistic AWS response data
 
 ## File Complexity Levels
 

@@ -1,0 +1,42 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Space Odyssey",
+      "year": 2023,
+      "director": "James Cameron",
+      "genre": ["Science Fiction", "Adventure"],
+      "duration_minutes": 165,
+      "rating": "PG-13",
+      "imdb_score": 8.7,
+      "cast": [
+        {"name": "Tom Hardy", "role": "Captain Rex"},
+        {"name": "Emma Stone", "role": "Dr. Sarah Chen"},
+        {"name": "Idris Elba", "role": "Commander Jackson"}
+      ],
+      "budget": 200000000,
+      "box_office": 850000000,
+      "awards": [
+        {"name": "Best Visual Effects", "ceremony": "Academy Awards"},
+        {"name": "Best Sound", "ceremony": "Academy Awards"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Mystery at Midnight",
+      "year": 2022,
+      "director": "Sofia Coppola",
+      "genre": ["Mystery", "Thriller"],
+      "duration_minutes": 118,
+      "rating": "R",
+      "imdb_score": 7.5,
+      "cast": [
+        {"name": "Jennifer Lawrence", "role": "Detective Maria"},
+        {"name": "Oscar Isaac", "role": "Daniel Cross"}
+      ],
+      "budget": 30000000,
+      "box_office": 95000000,
+      "awards": []
+    }
+  ]
+}

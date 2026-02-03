@@ -1,0 +1,54 @@
+{
+  "company": {
+    "name": "TechVentures Inc.",
+    "founded": 2010,
+    "employees": 250,
+    "headquarters": {
+      "address": "123 Innovation Drive",
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA",
+      "zip": "94105"
+    },
+    "departments": [
+      {
+        "name": "Engineering",
+        "manager": "Sarah Johnson",
+        "employees": 120,
+        "teams": [
+          {
+            "name": "Backend",
+            "members": 45,
+            "tech_stack": ["Python", "Go", "PostgreSQL"]
+          },
+          {
+            "name": "Frontend",
+            "members": 35,
+            "tech_stack": ["React", "TypeScript", "CSS"]
+          },
+          {
+            "name": "DevOps",
+            "members": 40,
+            "tech_stack": ["Kubernetes", "AWS", "Terraform"]
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "manager": "Michael Chen",
+        "employees": 60,
+        "regions": ["North America", "Europe", "Asia Pacific"]
+      },
+      {
+        "name": "Human Resources",
+        "manager": "Emily Rodriguez",
+        "employees": 25
+      }
+    ],
+    "revenue": {
+      "2023": 50000000,
+      "2024": 75000000,
+      "currency": "USD"
+    }
+  }
+}

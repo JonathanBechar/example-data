@@ -1,0 +1,45 @@
+[
+  {
+    "id": 101,
+    "title": "Getting Started with Python",
+    "author": {
+      "id": 5,
+      "name": "Alice Developer",
+      "avatar": "https://example.com/avatars/alice.jpg"
+    },
+    "content": "Python is a versatile programming language that's great for beginners...",
+    "tags": ["python", "programming", "tutorial"],
+    "published_at": "2024-01-10T08:00:00Z",
+    "views": 1250,
+    "likes": 89,
+    "comments": [
+      {
+        "id": 1001,
+        "author": "Bob Reader",
+        "text": "Great article! Very helpful.",
+        "posted_at": "2024-01-11T10:30:00Z"
+      },
+      {
+        "id": 1002,
+        "author": "Carol Learner",
+        "text": "Could you add more examples?",
+        "posted_at": "2024-01-12T14:15:00Z"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Advanced JavaScript Techniques",
+    "author": {
+      "id": 8,
+      "name": "Charlie Expert",
+      "avatar": "https://example.com/avatars/charlie.jpg"
+    },
+    "content": "In this post, we'll explore advanced JavaScript patterns and best practices...",
+    "tags": ["javascript", "advanced", "webdev"],
+    "published_at": "2024-01-15T12:00:00Z",
+    "views": 2100,
+    "likes": 156,
+    "comments": []
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": "PROD-001",
+  "name": "Laptop Computer",
+  "description": "High-performance laptop with 16GB RAM",
+  "price": 1299.99,
+  "currency": "USD",
+  "in_stock": true,
+  "quantity": 45,
+  "categories": ["Electronics", "Computers"],
+  "manufacturer": "TechCorp"
+}

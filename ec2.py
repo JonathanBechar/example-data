@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 import boto3
 from argparse import ArgumentParser
 import json
+from pydantic import BaseModel
+import logging
 
 
 load_dotenv()
@@ -67,7 +69,7 @@ if __name__ == "__main__":
     parser.add_argument("--start", help="Starts the given instance id", nargs="+", default=[])
     args = parser.parse_args()
     
-# Homework:
+# Homework 03.02.2026:
 # python3 ec2.py
 # List all the ec2 computer ids and their state
 # Example:
@@ -102,6 +104,13 @@ if __name__ == "__main__":
     if args.stop:
         stop_instances(ec2, args.stop)
  
+
+# Homework 08.02.2026:
+# add a logging system to the program
+# add pydantic classes to the program
+
+
+
 
 
 

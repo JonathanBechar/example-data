@@ -106,10 +106,9 @@ if __name__ == "__main__":
  
 
 # Homework 08.02.2026:
-# add a logging system to the program
-# add pydantic classes to the program
-
-
+# create Ec2Instances pydantic model (class) with all the fields we care about
+# Replace (almost) all 'print' with logging
+# Logging must be both to a file and to stdout, both with different levels
 
 
 
@@ -120,6 +119,7 @@ if __name__ == "__main__":
     # instances = ec2.instances.all()
     # for instance in instances:
     #     print(instance.state)
+    
     # s3 = boto3.client("s3")
     # s3.create_bucket(Bucket="jb-yonatanb-devops-example-1")
     # s3.upload_file(Filename="1.txt", Key="folder1/uploads/file.txt", Bucket="jb-yonatanb-devops-example-1")

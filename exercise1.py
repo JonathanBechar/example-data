@@ -41,7 +41,13 @@ def solve_homework():
     client.stop_instances(InstanceIds=[last_id])
 
 def terminate_all_ec2():
-    response = client.describe_instances()
+    response = client.describe_instances(
+        Filters=[
+            {"Name": "image-id", "Values": ["ami-0b6c6ebed2801a5cb"]},
+            {"Name": "instance-state-name", "Values": "running"},
+            {"Name": "platform", "Values": ["Linux"]},
+        ],
+    )
     ids = []
     for res in response["Reservations"]:
         for instance in res["Instances"]:

@@ -2,11 +2,62 @@ from dotenv import load_dotenv
 import boto3
 from argparse import ArgumentParser
 import json
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator, Field
 import logging
-
+from logging.handlers import RotatingFileHandler
+from ipaddress import IPv4Address
+import sys
 
 load_dotenv()
+
+
+# Homework 08.02.2026:
+# Replace (almost) all 'print' with logging
+# Logging must be both to a file and to stdout, both with different levels
+logger = logging.getLogger(__name__)
+def setup_logging():
+    logger.setLevel(logging.DEBUG)
+    my_format = logging.Formatter("%(asctime)s %(levelname)s\t%(filename)s %(funcName)s - %(message)s")
+    # File Handler
+    file_handler = RotatingFileHandler("ec2.log", maxBytes=1024*1024*10, backupCount=3)
+    # file_handler = logging.FileHandler("my_log.log")
+    file_handler.setFormatter(my_format)
+    file_handler.setLevel(logging.DEBUG)
+    # Print Handler(STDOUT)
+    print_handler = logging.StreamHandler(sys.stdout)
+    print_handler.setLevel(logging.INFO)
+    # Add Handlers
+    if not logger.handlers:
+        logger.addHandler(file_handler)
+        logger.addHandler(print_handler)
+
+
+# Homework 08.02.2026:
+# create Ec2Instances pydantic model (class) with all the fields we care about
+class InstanceState(BaseModel):
+    Name: str
+
+class Ec2Instance(BaseModel):
+    InstanceId: str = Field(min_length=19, max_length=19)
+    PublicIpAddress: IPv4Address
+    InstanceType: str
+    State: InstanceState
+    actions: list = Field(default_factory=list)
+
+    @field_validator("InstanceId")
+    @classmethod
+    def validate_id(cls, value: str) -> str:
+        if not value.startswith("i-"):
+            raise ValueError("InstanceId must start with i-")
+        return value
+    
+    @field_validator("InstanceType")
+    @classmethod
+    def validate_type(cls, value: str) -> str:
+        allowed = ["t2.micro", "t2.small"]
+        if value not in allowed:
+            raise ValueError(f"InstanceType must be one of {allowed}")
+        return value
 
 
 def get_running_instances(instances: list[dict]) -> dict:
@@ -69,19 +120,20 @@ if __name__ == "__main__":
     parser.add_argument("--start", help="Starts the given instance id", nargs="+", default=[])
     args = parser.parse_args()
     
-# Homework 03.02.2026:
-# python3 ec2.py
-# List all the ec2 computer ids and their state
-# Example:
-# 1. t2.micro(i-05a725e4503ec17b0) - Running
-# 2. t2.micro(i-0a46993c077680f08) - Stopped
-# Choose a machine to change state(from running to stopped, or from stopped to running): 1
+    # Homework 03.02.2026:
+    # python3 ec2.py
+    # List all the ec2 computer ids and their state
+    # Example:
+    # 1. t2.micro(i-05a725e4503ec17b0) - Running
+    # 2. t2.micro(i-0a46993c077680f08) - Stopped
+    # Choose a machine to change state(from running to stopped, or from stopped to running): 1
     ec2 = boto3.client("ec2")
     instances = get_ec2_instances(None)
     running = get_running_instances(instances)
     print(running)
     print_all_instances(instances)
     
+    # Homework 03.02.2026:
     # python ec2.py --list
     # Only print the list of stats, without waiting for user input, and exit
     if not args.list:
@@ -97,6 +149,7 @@ if __name__ == "__main__":
                 print("Please enter only numbers")
         flip_instance_state(instances[user_choice - 1])
 
+    # Homework 03.02.2026:
     # python ec2.py --stop i-0a46993c077680f08 i-05a725e4503ec17b0
     # python ec2.py --start i-0a46993c077680f08 i-05a725e4503ec17b0
     if args.start:
@@ -104,13 +157,6 @@ if __name__ == "__main__":
     if args.stop:
         stop_instances(ec2, args.stop)
  
-
-# Homework 08.02.2026:
-# create Ec2Instances pydantic model (class) with all the fields we care about
-# Replace (almost) all 'print' with logging
-# Logging must be both to a file and to stdout, both with different levels
-
-
 
 
 
